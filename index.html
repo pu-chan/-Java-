@@ -5,12 +5,33 @@
   <title>スッキリわかるJava入門 | 実践編</title>
 </head>
 <body>
-  <h1>スッキリわかるJava入門 | 実践編</h1>
-  <p>2019年9月29日〜</p>
-
-  <h3>第1部　さまざまな基本機能</h3>
+  <h1>第3章</h1>
+  <p>サーブレットクラスについて</p>
   <ul>
-    <li>第1章　文字列の操作</li>
+    <li>サーブレットクラスはブラウザからリクエストして実行できる。</li>
+    <li>サーブレットクラスの実行結果は、一般的にはHTML(Webページ)である。</li>
+  </ul>
+  <p>サーブレットクラスの定義方法について</p>
+  <ul>
+    <li>javax.servlet.http.HttpServletを継承する。</li>
+    <li>doGet()メソッドをオーバーライドして処理を記述する。</li>
+    <li>doGet()の引数のHttpServletRequestはリクエストに関する情報と機能を持つ。また、doGet()の引数のHttpServletResponseはレスポンスに関する情報と機能を持つ。</li>
+  </ul>
+  <p>HTMLのレスポンスについて</p>
+  <ul>
+    <li>HttpServletResponseのsetContentType()でContent-Typeヘッダを指定する。</li>
+    <li>HttpServletResponseのgetWriter()でPrintWriterインスタンスを取得してHTMLを出力する。</li>
+  </ul>
+  <p>サーブレットクラスのURLとURLパターンについて</p>
+  <ul>
+    <li>サーブレットクラスのURLは以下の形式となる。<br>http://<サーバ名>/<アプリケーション名>/<URLパターン></li>
+    <li>URLパターンは@WebServletアノテーションを使って設定する。</li>
+    <li>Eclipse使用時は自動的にクラス名がURLパターンに設定される。</li>
+  </ul>
+  <p>サーブレットクラスの実行について</p>
+  <ul>
+    <li>GETリクエストされた場合、deGet()メソッドが実行される。</li>
+    <li>サーブレットクラスのソースコードを修正しても、実行結果にすぐに反映されないことがある。</li>
   </ul>
 </body>
 </html>
