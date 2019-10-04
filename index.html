@@ -130,5 +130,21 @@
       <li>保存したインスタンスは、フォワード先では取得できるが、リダイレクト先では一度レスポンスが返されるため取得できない。</li>
     </ul>
   </div>
+  <div class="seven">
+    <h1>第8章</h1>
+    <p>セッションスコープについて</p>
+    <ul>
+      <li>正体はHttpSessionインスタンス。サーブレットクラスの場合、HttpServletRequestインスタンスのgetSession()で取得する。</li>
+      <li>JSPの場合、HttpSessionインスタンスは暗黙オブジェクト「session」で利用できる。</li>
+      <li>インスタンスの保存は、setAttribute()メソッド、インスタンスの取得はgetAttribute()メソッド、インスタンスの削除はremoveAttribute()メソッドを使用する。</li>
+      <li>セッションスコープに保存したインスタンスはリクエストをまたいで使用できる。</li>
+    </ul>
+    <p>セッションスコープのしくみについて</p>
+    <ul>
+      <li>セッションスコープはブラウザごとに作成され、固有のセッションIDがブラウザとHttpSessionインスタンスに設定される。</li>
+      <li>Apatch Tomcatの初期設定では、ブラウザを閉じるとそれ以前に利用していたHttpSessionインスタンスを利用できなくなる。</li>
+      <li>不要となったインスタンスを残していると不具合の原因となる。invalidate()メソッドで、HttpSessionインスタンスを破棄できる。</li>
+    </ul>
+  </div>
 </body>
 </html>
